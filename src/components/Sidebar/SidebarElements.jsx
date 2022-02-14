@@ -9,11 +9,10 @@ export const SidebarContainer = styled.aside`
   height: 100%;
   z-index: 999;
   background: #0d0d0d;
-  display: grid;
+  display: ${({ isOpen }) => (isOpen ? 'grid' : 'none')};
   align-items: center;
   left: 0;
   transition: 0.3s ease-in-out;
-  opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
   top: ${({ isOpen }) => (isOpen ? '0' : '100')};
 `;
 
