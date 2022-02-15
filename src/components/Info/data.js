@@ -17,7 +17,7 @@ export const homeObjOne = {
   buttonLabel: 'Get Started',
   imgStart: false,
   img: svg3,
-  alt: 'Car',
+  alt: 'Transaction',
   dark: true,
   primary: true,
   darkText: false,
