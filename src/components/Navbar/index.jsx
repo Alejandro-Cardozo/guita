@@ -7,38 +7,83 @@ import {
   NavItem,
   NavLinks,
   NavBtn,
-  NavBtnLink
+  NavBtnLink,
 } from './NavbarElements';
-import { FaBars } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
 
-const Navbar = ({ toggle }) => {
+const Navbar = ({ toggle, toggleHome, scrollNav }) => {
   return (
     <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogo to='/'>guita</NavLogo>
-          <MobileIcon onClick={toggle}>
-            <FaBars />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to='about'>About</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='discover'>Discover</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='services'>Services</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='signup'>Sign Up</NavLinks>
-            </NavItem>
-          </NavMenu>
-          <NavBtn>
-            <NavBtnLink to='/signin'>Sign In</NavBtnLink>
-          </NavBtn>
-        </NavbarContainer>
-      </Nav>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <Nav scrollNav={scrollNav}>
+          <NavbarContainer>
+            <NavLogo to='/' onClick={toggleHome}>
+              guita
+            </NavLogo>
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+            <NavMenu>
+              <NavItem>
+                <NavLinks
+                  to='about'
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                  activeClass='active'
+                >
+                  About
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to='discover'
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                  activeClass='active'
+                >
+                  Discover
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to='services'
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                  activeClass='active'
+                >
+                  Services
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to='signup'
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                  activeClass='active'
+                >
+                  Sign Up
+                </NavLinks>
+              </NavItem>
+            </NavMenu>
+            <NavBtn>
+              <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+            </NavBtn>
+          </NavbarContainer>
+        </Nav>
+      </IconContext.Provider>
     </>
   );
 };

@@ -22,7 +22,7 @@ import {
   WebsiteRights
 } from './FooterElements';
 
-const Footer = () => {
+const Footer = ({ toggleHome }) => {
   const d = new Date();
   let year = d.getFullYear();
 
@@ -49,24 +49,24 @@ const Footer = () => {
           </FooterLinksWrapper>
           <FooterLinksWrapper>
             <FooterLinkItems>
-              <FooterLinkTitle>Videos</FooterLinkTitle>
-              <FooterLink to='/'>Submit Video</FooterLink>
+              <FooterLinkTitle>Company</FooterLinkTitle>
+              <FooterLink to='/'>Strategy</FooterLink>
               <FooterLink to='/'>Ambassadors</FooterLink>
               <FooterLink to='/'>Agency</FooterLink>
-              <FooterLink to='/'>Influencer</FooterLink>
+              <FooterLink to='/'>Our impact</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
-              <FooterLinkTitle>Social Media</FooterLinkTitle>
-              <FooterLink to='/'>Instagram</FooterLink>
-              <FooterLink to='/'>Facebook</FooterLink>
-              <FooterLink to='/'>Youtube</FooterLink>
-              <FooterLink to='/'>Twitter</FooterLink>
+              <FooterLinkTitle>Legal</FooterLinkTitle>
+              <FooterLink to='/'>Copyright</FooterLink>
+              <FooterLink to='/'>Privacy Statement</FooterLink>
+              <FooterLink to='/'>Social media policy</FooterLink>
+              <FooterLink to='/'>User Guidelines</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/'>guita</SocialLogo>
+            <SocialLogo to='/' onClick={toggleHome}>guita</SocialLogo>
             <WebsiteRights>
               guita &copy; {year}. All rights reserved.
             </WebsiteRights>
