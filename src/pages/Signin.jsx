@@ -1,9 +1,10 @@
-import React from 'react'
-
+import Signin from "../components/Signin";
 const SignIn = () => {
   return (
-    <div>Sign in page</div>
-  )
-}
+    <div>
+      <Signin />
+    </div>
+  );
+};
 
-export default SignIn
+export default SignIn;
