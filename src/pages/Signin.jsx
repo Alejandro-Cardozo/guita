@@ -1,9 +1,11 @@
-import Signin from "../components/Signin";
+import ResetScrollPosition from '../components/ResetScrollPosition';
+import Signin from '../components/Signin';
 const SignIn = () => {
   return (
-    <div>
+    <>
+      <ResetScrollPosition />
       <Signin />
-    </div>
+    </>
   );
 };
 

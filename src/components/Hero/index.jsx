@@ -14,14 +14,14 @@ import {
 } from './HeroElements';
 
 const Hero = () => {
-  const [hover, setHover] = useState(false)
+  const [hover, setHover] = useState(false);
 
   const onHoverHandler = () => {
-    setHover(prev => !prev)
-  }
+    setHover((prev) => !prev);
+  };
 
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
       </HeroBg>
@@ -32,7 +32,18 @@ const Hero = () => {
           your next payment
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='signup' onMouseEnter={onHoverHandler} onMouseLeave={onHoverHandler} primary='true'>
+          <Button
+            to='signup'
+            onMouseEnter={onHoverHandler}
+            onMouseLeave={onHoverHandler}
+            primary='true'
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact='true'
+            offset={-80}
+            activeClass='active'
+          >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
