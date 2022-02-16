@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="" rel="noopener">
+  <a href="https://guita.vercel.app/" rel="noopener">
  <img width=200px height=200px src="src/favicon.svg" alt="Project logo"></a>
 </p>
 
@@ -26,7 +26,6 @@
 - [Usage](#usage)
 - [Built Using](#built_using)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
 ## About <a name = "about"></a>
 
@@ -58,7 +57,7 @@ Once you have Node Js on your system, run `npm install` in order to get all the 
 
 <img width=1034 height=500 src="src/images/Screenshot.png" alt="Project overview"></a>
 
-You can make changes in the components and pages folder.
+You can make changes in the components and pages folders.
 Run `npm run dev` to see in the browser all the changes that you do in the page.
 
 ## Deployment <a name = "deployment"></a>
