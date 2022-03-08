@@ -55,7 +55,7 @@ Once you have Node Js on your system, run `npm install` in order to get all the 
 
 ## Usage <a name="usage"></a>
 
-<img width=1034 height=500 src="src/images/Screenshot.png" alt="Project overview"></a>
+<img width="100%" src="src/images/Screenshot.png" alt="Project overview"></a>
 
 You can make changes in the components and pages folders.
 Run `npm run dev` to see in the browser all the changes that you do in the page.
